@@ -25,3 +25,6 @@ from source_data
 */
 
 -- where id is not null
+
+
+dbt run

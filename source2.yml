@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    database: WORKSPACE_SOURCE_DEV
+    schema: COM_DEV
+
+    tables:
+      - name: hcp_master
+
+      - name: territory_alignment
+
+      - name: patient_transactions
+
+      - name: call_activity
+
+      - name: dim_week
