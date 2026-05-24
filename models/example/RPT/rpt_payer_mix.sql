@@ -9,19 +9,17 @@ WITH trx AS (
 ),
 
 final AS (
+        SELECT
+    payer_group,
+    payer_type,
 
-    SELECT
+    COUNT(DISTINCT patient_id) AS total_patients,
 
-        payer_group,
+    SUM(trx_count) AS total_trx,
 
-        payer_type,
+    SUM(nbrx_trx_count) AS total_nbrx,
 
-        COUNT(DISTINCT patient_id)                    AS total_patients,
-
-        SUM(trx_count)                                AS total_trx,
-
-        SUM(nbrx_trx_count)                           AS total_nbrx
-
+    AVG(patient_age) AS avg_patient_age
     FROM trx
 
     GROUP BY
