@@ -1,0 +1,39 @@
+version: 2.0
+
+models:
+
+  - name: stg_hcp_master
+    description: "Staging model for hcp master data from CRM source."
+
+    columns:
+
+      - name: hcp_id
+        description: "Unique hcp identifier."
+        tests:
+          - not_null
+          - unique
+
+      - name: hcp_npi
+        description: "National Provider Identifier for HCP."
+        tests:
+          - not_null
+
+      - name: specialty
+        description: "Medical specialty of hcp."
+
+      - name: territory_id
+        description: "Assigned sales territory."
+
+#- name: target_flag
+#  description: "Indicates whether HCP is target provider."
+#  tests:
+#    - accepted_values:
+#        arguments:
+#          values: [1, 0]
+#
+#- name: email_opt_in
+#  description: "Indicates HCP email consent."
+#  tests:
+#    - accepted_values:
+#        arguments:
+#          values: [1, 0]

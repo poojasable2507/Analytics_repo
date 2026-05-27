@@ -1,0 +1,37 @@
+version: 2
+
+models:
+
+  - name: fct_patient_transactions
+    description: "Fact table containing patient transaction metrics."
+
+    columns:
+
+      - name: transaction_id
+        description: "Unique transaction identifier."
+        tests:
+          - not_null
+          - unique
+
+      - name: patient_id
+        description: "Unique patient identifier."
+        tests:
+          - not_null
+
+      - name: hcp_id
+        description: "Healthcare provider identifier."
+
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_hcp')
+                field: hcp_id
+
+      - name: territory_id
+        description: "Sales territory identifier."
+
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_territory')
+                field: territory_id
