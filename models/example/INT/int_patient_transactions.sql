@@ -2,7 +2,7 @@
 WITH trx AS (
 
     SELECT *
-    FROM {{ ref('stg_patient_transactions') }}
+    FROM {{ ref('stg_ptnt_trans') }}
 
 ),
 
