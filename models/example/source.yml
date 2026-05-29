@@ -8,10 +8,8 @@ sources:
     tables:
       - name: hcp_master
 
-      - name: territory_alignment
+      - name: zip_to_terr
 
-      - name: patient_transactions
-
-      - name: call_activity
-
-      - name: dim_week
+      - name: ptnt_trans
+   
+      - name: hcp_addr
