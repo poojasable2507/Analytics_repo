@@ -4,7 +4,7 @@ sources:
   - name: raw
     database: WORKSPACE_SOURCE_DEV
     schema: COM_DEV
-
+    
     tables:
       - name: hcp_master
 
